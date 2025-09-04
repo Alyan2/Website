@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Abbasi Migration</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  
+}
+
+body {
+  color: #ffffff;
+  scroll-behavior: smooth;
+  background: rgb(249, 247, 247);
+  overflow-x: hidden;
+}
+
+.top-bar {
+  background: #00295c;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.socials img {
+  width: 20px;
+  margin-left: 10px;
+}
+
+.navbar {
+  background: white;
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+  box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
+  z-index: 10000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 196px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+.nav-links a:hover{
+  color: #f5a623;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 570;
+  text-transform: uppercase;
+  transition: 0.2s;
+}
+
+.btn-appointment {
+  background-color: #f5a623;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: 0.4s;
+}
+.btn-appointment:hover{
+  background-color: #00295c;
+}
+
+.main {
+  background: url('https://www.curiousgoosetravel.com/wp-content/uploads/2023/07/6262bd_c26714b4525c439db96c8c876676f5e3mv2.jpg') no-repeat center center/cover;
+  height: 600px;
+  position: relative;
+}
+
+.overlay {
+  background: rgba(0,0,0,0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.main-content {
+  position: relative;
+  z-index: 1;
+  padding: 150px 30px 0 30px;
+  max-width: 700px;
+}
+
+.main h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.main h1 {
+  font-size: 46px;
+  margin-bottom: 20px;
+}
+
+.main p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.btn-readmore {
+  background-color: #f5a623;
+  color: white;
+  padding: 12px 20px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: 0.4s;
+}
+.btn-readmore:hover{
+  background-color: #00295c;
+}
+.austrailia{
+  width: 100%;
+  height: 500px;
+}
+.austrailia h1{
+  text-align: center;
+}
+.austrailia-content {
+  padding: 60px 20px;
+  padding-bottom: 0px;
+  max-width: 900px;
+  margin: auto;
+  color: #000;
+  text-align: center;
+}
+
+.austrailia-content h2 {
+  font-size: 21spx;
+  font-weight: 450;
+  color: #f5a623;
+  margin-bottom: 10px;
+}
+
+.austrailia-content h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.austrailia-content p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 40px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.services-section {
+  padding: 20px;
+  text-align: center;
+}
+
+.services-section h2 {
+  font-size: 21px;
+  color: #f5a623;
+  margin-bottom: 10px;
+  font-weight: 450;
+}
+
+.services-section h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: #000;
+  font-weight: 600;
+}
+
+.services-section p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.5;
+  font-weight: 400;
+}
+.box1{
+  width: 363px;
+  height: 327px;
+  border: 1px solid black;
+  border-radius: 15px;
+  text-align: center;
+}
+.box1.a{
+  background: url(student-visa.jpg) no-repeat center center / cover;
+  line-height: 2;
+}
+.box1.b{
+  background: url(bridging-visa.jpg) no-repeat center center / cover;
+}
+.box1.c{
+  background: url(employee-visa.jpg) no-repeat center center / cover;
+  line-height: 2;
+}
+.box1.d{
+  background: url(partner-visa.jpg) no-repeat center center / cover;
+}
+.box1.e{
+  background: url(parent-visa.jpg) no-repeat center center / cover;
+}
+.box1.f{
+  background: url(family-visa.jpg) no-repeat center center / cover;
+}
+.box-container{
+  margin-top: 80px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  row-gap: 100px;
+  width: 77%;
+  padding-left: 168px;
+}
+.visa-info-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+  background-color: #f8f9fa;
+}
+
+.visa-box {
+  background-color: #fff;
+  padding: 50px 150px;
+  max-width: 800px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.visa-box h1 {
+  font-size: 32px;
+  color: #000;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.visa-box p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 30px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.visa-btn {
+  background-color: #f6b31e;
+  color: white;
+  padding: 15px 25px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 6px;
+  transition: background-color 0.5s ease;
+}
+
+.visa-btn:hover {
+  background-color: #00295c;
+}
+.process-section {
+  background: #ffffff;
+  padding: 80px 20px;
+  background: url(about_img.png) no-repeat center center / cover;
+  background-size: cover;
+  padding: 80px 20px;
+  color: #fff;
+  position: relative;
+}
+
+.process-container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.process-row {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.process-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+  width: 500px;
+  min-height: 200px;
+  box-sizing: border-box;
+}
+
+.center-card {
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 30px;
+}
+.process-heading{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.heading-left h1{
+  color: #000;
+  font-size: 38px;
+  font-weight: 580;
+}
+.heading-left{
+  margin-bottom: 20px;
+}
+.heading-right{
+  color: #000;
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+.why-choose-section {
+  background-color: #f9f9fa;
+  padding: 60px 80px 80px 0px;
+  text-align: center;
+  color: #000;
+}
+
+.why-choose-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.key-features {
+  color: #f5a623;
+  font-weight: 500;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  font-size: 20px;
+  padding-left: 80px;
+}
+
+.why-choose-section h2 {
+  font-size: 40px;
+  margin-bottom: 40px;
+  font-weight: 600;
+  padding-left: 80px;
+}
+
+.boxes-flex {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: nowrap;
+}
+
+.box {
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  padding: 30px 20px;
+  min-width: 250px;
+  text-align: left;
+  transition: 0.4s;
+}
+.box h3 {
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.box p {
+  font-weight: 440;
+  font-size: 14px;
+  line-height: 1.6;
+  color: gray;
+  transition: 0.4s;
+}
+.box:hover{
+  background-color: #00295c;
+  color: white;
+}
+.box:hover p{
+  color: white;
+}
+.why-australia-section {
+  background: url(australia.jpg) no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  padding: 60px 20px;
+}
+
+.why-australia-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.why-australia-left {
+  flex: 1;
+  min-width: 280px;
+}
+
+.card-empty {
+  background: white;
+  color: black;
+  min-height: 90px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  box-shadow: 0 0 10px rgb(0 0 0 / 0.1);
+}
+
+.why-australia-right-pic {
+  flex: 1;
+  min-width: 280px;
+  background: url(01-2.jpg) no-repeat center center;
+  box-shadow: 0 0 20px rgb(0 0 0 / 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: italic;
+  font-weight: 600;
+  color: #555;
+  min-height: 400px;
+  text-align: center;
+  border-radius: 20px;
+}
+.migration-journey {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+}
+
+.migration-container {
+  background: #fff;
+  border-left: 4px solid #f6b31e;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  max-width: 1100px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.migration-text {
+  flex: 1;
+  min-width: 250px;
+  margin-right: 20px;
+}
+
+.migration-text h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #0a1a2b;
+  margin-bottom: 15px;
+}
+
+.migration-text p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.migration-button {
+  background-color: #f6b31e;
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.4s ease;
+}
+
+.migration-button:hover {
+  background-color: #00295c;
+}
+
+.mission-vision-section {
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.mission-vision-container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 1100px;
+}
+
+.mv-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.08);
+  padding: 30px;
+  display: flex;
+  align-items: flex-start;
+  flex: 1;
+  min-width: 300px;
+  max-width: 520px;
+}
+
+.mv-card img {
+  width: 40px;
+  margin-right: 20px;
+}
+
+.mv-content h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #000;
+  transition: 0.4s;
+}
+
+.mv-content p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+}
+.mv-card:hover h3{
+  color: #f6b31e;
+}
+.footer {
+  background-color: #002f68;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 0 20px;
+}
+
+.footer-section h3 {
+  color: #f9b000;
+  margin-bottom: 15px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 8px 0;
+}
+
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+.footer-section ul li a:hover {
+  color: #f6b31e;
+}
+
+.logo-section img.footer-logo {
+  width: 100px;
+  margin-bottom: 15px;
+}
+
+.logo-section p {
+  line-height: 1.6;
+}
+
+.marn-box {
+  background: white;
+  color: black;
+  border-radius: 15px;
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.marn-number {
+  background-color: #002f5f;
+  color: white;
+  padding: 8px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.marn-box a {
+  color: #002f5f;
+  text-decoration: none;
+}
+
+.social-icons a img {
+  width: 35px;
+  height: 35px;
+  margin: 0 5px;
+  border-radius: 50%;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 14px;
+}
+
+.process-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+  width: 500px;
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.number-circle {
+  min-width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.card-content h2 {
+  color: #000;
+  font-size: 20px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.card-content p {
+  color: #333;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+</style>
+<body>
+  <header class="top-bar">
+    <div class="email">info@abbasimigration.com</div>
+    <div class="socials">
+      <a href="#"><img class="facebook" src="https://cdn-icons-png.flaticon.com/128/733/733547.png" alt="Facebook"></a>
+      <a href="#"><img class="youtube" src="https://cdn-icons-png.flaticon.com/128/174/174883.png" alt="YouTube"></a>
+      <a href="#"><img class="linkedin" src="https://cdn-icons-png.flaticon.com/128/3536/3536505.png" alt="LinkedIn"></a>
+      <a href="#"><img class="tiktok" src="https://cdn-icons-png.flaticon.com/128/5968/5968812.png" alt="TikTok"></a>
+      <a href="#"><img class="instagram" src="https://cdn-icons-png.flaticon.com/128/15713/15713420.png" alt="Instagram"></a>
+    </div>
+  </header>
+
+  <nav class="navbar">
+    <div class="logo">
+    <a href="adwlah.html">  <img src="https://abbasimigration.com.au/wp-content/uploads/2025/06/Logo-Abbasi-Migration-e1749625572865.png" alt="Abbasi Migration Logo"/></a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#austrailia">Why Australia</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <button class="btn-appointment">Book Appointment</button>
+  </nav>
+
+  <section class="main">
+    <div class="overlay"></div>
+    <div class="main-content">
+      <h2>Welcome to Abbasi Migration & Citizenship Services</h2>
+      <h1>Your Australian Dream<br>Starts Here</h1>
+      <p>
+        Start your journey to a new life in Australia with<br>
+        Expert <strong>visa support</strong> and seamless <strong>immigration</strong> <br> <strong>services</strong>
+      </p>
+      <a href="#" class="btn-readmore">Read More</a>
+    </div>
+  </section>
+
+<section class="austrailia" id="austrailia">
+  <div class="austrailia-content">
+    <h2>ABOUT COMPANY</h2>
+    <h1>Your Gateway to Australia</h1>
+    <p>
+At Abbasi Migration, we offer expert Australian immigration and visa services to <br> individuals, families, and businesses both in Australia and outside Australia. As your <br> trusted migration agent, we guide you through each step of the visa process. Our <br> mission is to make migration easier and help you achieve your goals with clarity,<br> confidence, and compliance.
+    </p>
+  </div>
+
+  <div class="services-section">
+    <h2>SERVICES WE PROVIDE</h2>
+    <h1>Explore Our Australian Visa Services</h1>
+    <p>
+      Abbasi Migration provides a comprehensive range of Australian immigration and visa <br> services, tailored to meet the needs of individuals from all nationalities who wish to travel, <br> study, work, or settle in Australia. We deliver personalised guidance to help you navigate <br> the visa process with clarity and confidence.
+    </p>
+  </div>
+</section>
+
+<section class="box-container">
+  <div class="box1 a">
+    <h1 style="padding-top: 110px; font-size: 28px; font-weight: 600;">Student Visa</h1>
+    <h2 style="font-size: large; font-weight: 500;">Subclass 500</h2>
+  </div>
+  <div class="box1 b"><h1 style="padding-top: 130px; font-size: 28px; font-weight: 600;">Administrative<br>Review Tribunal</h1></div>
+  <div class="box1 c">
+    <h1 style="padding-top: 110px; font-size: 28px; font-weight: 600;">Visitor Visa</h1>
+    <h2 style="font-size: large; font-weight: 500;">Subclass 600</h2>
+  </div>
+ </section>
+ <section class="box-container">
+  <div class="box1 d"><h1 style="padding-top: 140px; font-size: 28px; font-weight: 600;">Partner Visa</h1></div>
+  <div class="box1 e"><h1 style="padding-top: 130px; font-size: 28px; font-weight: 600;">Parents Visa</h1></div>
+  <div class="box1 f"><h1 style="padding-top: 130px; font-size: 28px; font-weight: 600;">Other Family Visa<h1></div>
+</section>
+
+<section class="visa-info-box">
+  <div class="visa-box">
+    <h1 style="font-weight: 650; font-size: 35px;">Find Out How Soon You Could Get Your Visa</h1>
+    <p style="font-weight: 500; font-size: 16px;">
+      Check real-time visa processing times for all Australian visa <br> categories and prepare your documents accordingly.
+    </p>
+    <a href="#" class="visa-btn">Check Processing Time →</a>
+  </div>
+</section>
+
+<section class="process-section">
+  <div class="process-heading">
+    <div class="heading-left"><h1>Redefining Migration <br> with Australia's Trusted <br> Visa Experts</h1></div>
+    <div class="heading-right"><p>Our personalized, strategy-driven process has helped <br> countless individuals, families, and businesses successfully <br> navigate the Australian immigration system. We’re <br> committed to delivering clear, confident outcomes <br> through every step of your migration journey.</p></div>
+  </div>
+  <div class="process-container">
+
+<div class="process-row">
+      <div class="process-card">
+        <div class="number-circle" style="background:#e74c3c;">1</div>
+        <div class="card-content">
+          <h2>Initial Consultation</h2>
+          <p>We start by understanding your background, goals, and eligibility. Our consultants provide a tailored migration pathway suited to your specific needs.</p>
+        </div>
+      </div>
+
+      <div class="process-card">
+        <div class="number-circle" style="background:#27ae60;">2</div>
+        <div class="card-content">
+          <h2>Profile Assessment</h2>
+          <p>Our team helps you gather and organize all necessary documents, ensuring compliance with Australian immigration requirements.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="process-row">
+      <div class="process-card">
+        <div class="number-circle" style="background:#8e44ad;">3</div>
+        <div class="card-content">
+          <h2>Application Submission</h2>
+          <p>We handle your application with accuracy and professionalism, submitting it through the proper legal channels to avoid delays or rejections.</p>
+        </div>
+      </div>
+
+      <div class="process-card">
+        <div class="number-circle" style="background:#f39c12;">4</div>
+        <div class="card-content">
+          <h2>Decision & Follow-Up</h2>
+          <p>Once your application is reviewed by authorities, we guide you through the outcome — whether it’s next steps, visa grant, or appeal options.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="process-card center-card">
+      <div class="number-circle" style="background:#9b59b6;">5</div>
+      <div class="card-content">
+        <h2>Ongoing Support</h2>
+        <p>We believe in long-term partnerships. Even after your visa is granted, we offer support for renewals, transitions, and future goals in Australia.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="why-choose-section">
+  <div class="why-choose-container">
+    <p class="key-features">KEY FEATURES</p>
+    <h2>Why Choose Abbasi Migration Solutions?</h2>
+    <div class="boxes-flex">
+      <a href="" style="text-decoration: none; color: #000;">
+      <div class="box">
+        <h3>Visa Migration Expertise</h3>
+        <p>Offering high-quality visa <br> migration services across Australia,<br> Abbasi Migration specializes in <br> facilitating smooth and successful <br> transitions for individuals and <br> families.</p>
+      </div>
+      </a>
+      <a href="" style="text-decoration: none; color: #000;">
+      <div class="box">
+        <h3>Trusted Migration Agency</h3>
+        <p>As a reputable migration agency in <br> Australia, we take pride in <br> providing reliable and efficient <br> solutions tailored to your unique <br> needs. Trust the journey with <br> Abbasi Migration.</p>
+      </div>
+      </a>
+      <a href="" style="text-decoration: none; color: #000;">
+      <div class="box">
+        <h3>Local Expertise</h3>
+        <p>Our migration agents possess in-depth knowledge of Australian immigration laws, ensuring you receive expert guidance throughout the visa application process.</p>
+      </div>
+      </a>
+      <a href="" style="text-decoration: none; color: #000;">
+      <div class="box">
+        <h3>Your Reliable Visa Partner</h3>
+        <p>As a leading visa company in Australia, we stand as your trusted partner, dedicated to achieving your immigration goals with professionalism and efficiency, courtesy of Abbasi Migration.</p>
+      </div>
+      </a>
+    </div>
+  </div>
+</section>
+<section class="why-australia-section">
+  <h1 style="text-align: center; margin-bottom: 40px; color: white; font-size: 40px; font-weight: 600;">Why Australia?</h1>
+  <div class="why-australia-container">
+    <div class="why-australia-left">
+      <div class="card-empty">
+        <h1></h1>
+        <p></p>
+      </div>
+      <div class="card-empty">
+        <h1></h1>
+        <p></p>
+      </div>
+      <div class="card-empty">
+        <h1></h1>
+        <p></p>
+      </div>
+      <div class="card-empty">
+        <h1></h1>
+        <p></p>
+      </div>
+    </div>
+    <div class="why-australia-right-pic"></div>
+  </div>
+</section>
+
+<section class="migration-journey">
+  <div class="migration-container">
+    <div class="migration-text">
+      <h2>Start Your Migration Journey Today</h2>
+      <p style="font-weight: 520;">
+        Ready to take the next step toward a new life in Australia? Book a personalized consultation with <br> our expert migration advisors. Whether you’re applying for a student visa, skilled migration, or <br> family sponsorship — we’ll guide you every step of the way.
+      </p>
+    </div>
+    <button class="migration-button">Book Appointment</button>
+  </div>
+</section>
+
+<section class="mission-vision-section">
+  <div class="mission-vision-container">
+
+     <div class="mv-card">
+      <a href="" style="text-decoration: none;">
+      <img src="https://abbasimigration.com.au/wp-content/uploads/2025/06/mission-icon.png" alt="Mission Icon">
+      <div class="mv-content">
+        <h3>Our Mission</h3>
+        <p>
+          We simplify the journey to travel and settle in Australia with reliable and transparent immigration services. Our mission is to promote global connections through business and education. With a client-first approach, we ensure a smooth and stress-free migration process.
+        </p>
+      </a>
+      </div>
+    </div>
+    <a href="" style="text-decoration: none;">
+       <div class="mv-card">
+      <img src="https://abbasimigration.com.au/wp-content/uploads/2025/06/vision-icon.png" alt="Vision Icon">
+      <div class="mv-content">
+        <h3>Our Vision</h3>
+        <p>
+          Our vision is to become a trusted global leader in Australian visa services. We aim to foster international connections, support economic growth, and open doors for students, professionals, families and travellers.
+        </p></a>
+      </div>
+    </div>
+
+  </div>
+</section>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section logo-section">
+      <img style="width: 200px;" src="https://abbasimigration.com.au/wp-content/uploads/2025/06/Logo-Abbasi-Migration-e1749625572865.png" alt="Abbasi Logo" class="footer-logo" />
+      <p>
+        We provide a comprehensive range of visa services tailored to meet the needs of
+        individuals from all nationalities seeking to travel, study, work, family or settle in
+        Australia.
+      </p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms & Services</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Useful Links</h3>
+      <ul>
+        <li><a href="#">Points Calculator</a></li>
+        <li><a href="#">Processing Time</a></li>
+        <li><a href="#">Consumer Guide</a></li>
+        <li><a href="#">Code of Conduct</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section marn-section">
+      <div class="marn-box">
+        <p>Migration Agent Registration Number</p>
+        <div class="marn-number">MARN 2518930</div>
+        <a href="https://www.mara.gov.au">www.mara.gov.au</a>
+      </div>
+      <div class="social-icons">
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/145/145802.png" alt="Facebook" /></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/15707/15707776.png" alt="Instagram" /></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/3670/3670147.png" alt="YouTube" /></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/145/145807.png" alt="LinkedIn" /></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/4782/4782345.png" alt="TikTok" /></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom" style="background-color: #00295c;">
+    Copyright © 2025 All Rights Reserved
+  </div>
+</footer>
+
+</body>
+</html>
